@@ -1,0 +1,102 @@
+/* ======= БАЗОВЫЕ СТИЛИ ======= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f1f1;
+}
+
+/* HEADER */
+.header {
+    background: #3f6fa2;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* BURGER */
+.burger {
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    display: none; /* ПК — скрыт */
+}
+
+/* MENU */
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+}
+
+/* ======= МОБИЛЬНАЯ И ПЛАНШЕТНАЯ ВЕРСИЯ ======= */
+/* width ≤ 1024px — планшет и телефон */
+@media (max-width: 1024px) {
+
+    .burger {
+        display: block; /* появляется бургер */
+    }
+
+    /* меню превращается в выпадающее */
+    .nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #3f6fa2;
+        display: none; /* скрыто */
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        border-top: 2px solid white;
+        gap: 15px;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+}
+
+/* ======= МОБИЛЬНАЯ ВЕРСИЯ — СУЖАЕМ ТЕКСТ ======= */
+@media (max-width: 600px) {
+    .content {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .nav a {
+        font-size: 20px;
+    }
+}
+
+/* ======= CONTENT ======= */
+
+.content {
+    background: white;
+    margin: 30px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+h1 {
+    color: #2b63af;
+}
